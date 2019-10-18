@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Notes - A personal notes site</title>
+    <link>https://joyeah.github.io/post/</link>
+    <description>Recent content in Posts on Notes - A personal notes site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Oct 2019 21:48:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://joyeah.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019 10 17_hugo</title>
+      <link>https://joyeah.github.io/post/2019-10-17_hugo/</link>
+      <pubDate>Thu, 17 Oct 2019 21:48:29 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/2019-10-17_hugo/</guid>
+      <description>How to create a Hugo site on github.com this is a hugo site created record</description>
+    </item>
+    
+  </channel>
+</rss>
