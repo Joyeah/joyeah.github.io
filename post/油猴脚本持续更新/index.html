@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>油猴爬虫方案 - Notes - A personal notes site</title>
+  <title>油猴脚本(持续更新) - Notes - A personal notes site</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Joyeah" /><meta name="description" content="背景 目前很多知名的网站都增加一些反爬虫手段，使得编写爬虫时并不那么理想，有些网站很难破解其反爬技术。如利用puppeteer技术操作页面时，" /><meta name="keywords" content="note, python, nodejs, go" />
+<meta name="author" content="Joyeah" /><meta name="description" content="招聘网站职位查询二次筛选 目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&amp;rdquo;IT&amp;rdquo" /><meta name="keywords" content="note, python, nodejs, go" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
-<link rel="canonical" href="https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E7%88%AC%E8%99%AB%E6%96%B9%E6%A1%88/" />
+<link rel="canonical" href="https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,26 +38,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="油猴爬虫方案" />
-<meta property="og:description" content="背景 目前很多知名的网站都增加一些反爬虫手段，使得编写爬虫时并不那么理想，有些网站很难破解其反爬技术。如利用puppeteer技术操作页面时，" />
+<meta property="og:title" content="油猴脚本(持续更新)" />
+<meta property="og:description" content="招聘网站职位查询二次筛选 目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&rdquo;IT&rdquo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E7%88%AC%E8%99%AB%E6%96%B9%E6%A1%88/" />
-<meta property="article:published_time" content="2019-11-29T08:27:56+08:00" />
-<meta property="article:modified_time" content="2019-11-29T08:27:56+08:00" />
-<meta itemprop="name" content="油猴爬虫方案">
-<meta itemprop="description" content="背景 目前很多知名的网站都增加一些反爬虫手段，使得编写爬虫时并不那么理想，有些网站很难破解其反爬技术。如利用puppeteer技术操作页面时，">
+<meta property="og:url" content="https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" />
+<meta property="article:published_time" content="2019-11-30T21:49:38+08:00" />
+<meta property="article:modified_time" content="2019-11-30T21:49:38+08:00" />
+<meta itemprop="name" content="油猴脚本(持续更新)">
+<meta itemprop="description" content="招聘网站职位查询二次筛选 目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&rdquo;IT&rdquo">
 
 
-<meta itemprop="datePublished" content="2019-11-29T08:27:56&#43;08:00" />
-<meta itemprop="dateModified" content="2019-11-29T08:27:56&#43;08:00" />
-<meta itemprop="wordCount" content="665">
+<meta itemprop="datePublished" content="2019-11-30T21:49:38&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-30T21:49:38&#43;08:00" />
+<meta itemprop="wordCount" content="402">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="油猴爬虫方案"/>
-<meta name="twitter:description" content="背景 目前很多知名的网站都增加一些反爬虫手段，使得编写爬虫时并不那么理想，有些网站很难破解其反爬技术。如利用puppeteer技术操作页面时，"/>
+<meta name="twitter:title" content="油猴脚本(持续更新)"/>
+<meta name="twitter:description" content="招聘网站职位查询二次筛选 目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&rdquo;IT&rdquo"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,10 +120,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">油猴爬虫方案</h1>
+      <h1 class="post-title">油猴脚本(持续更新)</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 29119-11-29 </span>
+        <span class="post-time"> 30119-11-30 </span>
         
         
       </div>
@@ -136,10 +136,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#背景">背景</a></li>
-<li><a href="#方案">方案</a></li>
-<li><a href="#缺点及优化">缺点及优化</a></li>
-<li><a href="#示意图">示意图</a></li>
+<li><a href="#招聘网站职位查询二次筛选">招聘网站职位查询二次筛选</a></li>
+<li><a href="#谷歌搜索结果过滤">谷歌搜索结果过滤</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -148,45 +146,47 @@
     <div class="post-content">
       
 
-<h2 id="背景">背景</h2>
+<h2 id="招聘网站职位查询二次筛选">招聘网站职位查询二次筛选</h2>
 
-<p>目前很多知名的网站都增加一些反爬虫手段，使得编写爬虫时并不那么理想，有些网站很难破解其反爬技术。如利用puppeteer技术操作页面时，往往出现一些加载异常，容易被网站检测程序探测到而拒绝响应。</p>
+<p>目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&rdquo;IT&rdquo;的岗位，或只找大于13K的。</p>
 
-<h2 id="方案">方案</h2>
+<p>初步实现的网站有：</p>
 
-<p>浏览器扩展程序油猴(tampermonkey)似乎可以做很多事件，对分析网页与事件处理有大的能力空间。由于油猴是在用户手动打开的浏览器下运行的，完全是与真人操作类似，可能不那么容易被检测到。</p>
+<ol>
+<li>直聘网</li>
+<li>猎聘网</li>
+<li>拉勾网</li>
+</ol>
 
-<p>思路是这样的：</p>
+<h2 id="谷歌搜索结果过滤">谷歌搜索结果过滤</h2>
 
-<p>第一步：人工启动浏览器，导航到要抓取数据的页面；（这一步是唯一人工干扰的）</p>
+<p>目标：我们在搜索时，经常发现一些高频率出现在前面的，往往不是因为它们的网页更接近你的答案，而是因为这些网站的SEO做的好。比如国内著名的ndsc.net(将ndsc反序)网站以及一些类似的内容分类网站，经常抄袭别的blog很在行，只知道拷贝过来，作者甚至可能对内容一窍不通，错误百出，有些根本未经验证；广告一大片，闪得你头晕。</p>
 
-<p>第二步：油猴自动启动，分析页面，处理页面数据；</p>
-
-<p>第三步：将获得的数据通过GM_xmlhttpRequest接口推送到后台数据接收服务，将数据入库；</p>
-
-<p>第三步：获得“下一页”标签元素，触发下一页请求；返回第二步重复运行；</p>
-
-<p>第四步：没有“下一页”时，程序退出。</p>
-
-<h2 id="缺点及优化">缺点及优化</h2>
-
-<p>上述方案的缺点很明显，那就是第一步必须是人工启动浏览，导航到具体页面，没有计划任务。</p>
-
-<p>当然这不是大问题，还是利用油猴，编写一个计划任务的脚本来解决上述问题，即利用js定时器，触发指定的页面。更进一步，我们有好多爬虫脚本，这时我们就做一个任务队列，让js定时器通过导航到指定页面来启动对应的js脚本。js定时器的@match值为<code>http://*/*</code>。</p>
-
-<p>具体做法是：</p>
-
-<p>一、编辑js定时器(计划任务)，实现定时打开指定网站；</p>
-
-<p>二、让浏览器始终打开；</p>
-
-<p>三、部分需要登录的网站，先行登录；并让定时器第间隔一段时间（如半小时）刷新一下网站的一个非数据页面。</p>
-
-<p>四、爬虫脚本执行完后，尽量关闭页签，以节省电脑资源。</p>
-
-<h2 id="示意图">示意图</h2>
-
-<p><img src="grab_flow.png" alt="流程图" /></p>
+<p>处理手段：将不喜欢的站点的内容置灰，将喜欢的网站条目前加★。用户可以自行修改脚本中的几个配置项，增加自己的喜好设置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//垃圾网站
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">trashsites</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;baidu.com&#39;</span><span class="p">,</span><span class="s1">&#39;csdn.net&#39;</span><span class="p">,</span><span class="s1">&#39;360.cn&#39;</span><span class="p">,</span>
+<span class="p">];</span>
+<span class="c1">//垃圾站点信息处理方式：remove-移除, gray-变灰
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">trash_action</span> <span class="o">=</span> <span class="s1">&#39;remove&#39;</span><span class="p">;</span>
+<span class="c1">//星标网站
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">starsites</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;liaoxuefeng.com&#39;</span><span class="p">,</span><span class="s1">&#39;shihu.com&#39;</span><span class="p">];</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>下载地址： <a href="https://github.com/Joyeah/tampermonkey_js">https://github.com/Joyeah/tampermonkey_js</a></p>
 
     </div>
 
@@ -198,7 +198,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        29119-11-29
+        30119-11-30
         
     </span>
   </p>
@@ -208,13 +208,9 @@
 <footer class="post-footer">
       
       <nav class="post-nav">
-        <a class="prev" href="/post/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">油猴脚本(持续更新)</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-            <span class="next-text nav-default">Hugo常用命令及页面指令</span>
+        
+        <a class="next" href="/post/%E6%B2%B9%E7%8C%B4%E7%88%AC%E8%99%AB%E6%96%B9%E6%A1%88/">
+            <span class="next-text nav-default">油猴爬虫方案</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
