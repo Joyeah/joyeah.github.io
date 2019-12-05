@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>方案 on Notes - A personal notes site</title>
+    <link>https://joyeah.github.io/categories/%E6%96%B9%E6%A1%88/</link>
+    <description>Recent content in 方案 on Notes - A personal notes site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Nov 2019 08:27:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://joyeah.github.io/categories/%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>油猴爬虫方案</title>
+      <link>https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E7%88%AC%E8%99%AB%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Fri, 29 Nov 2019 08:27:56 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E7%88%AC%E8%99%AB%E6%96%B9%E6%A1%88/</guid>
+      <description>背景 目前很多知名的网站都增加一些反爬虫手段，使得编写爬虫时并不那么理想，有些网站很难破解其反爬技术。如利用puppeteer技术操作页面时，</description>
+    </item>
+    
+  </channel>
+</rss>

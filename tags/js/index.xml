@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on Notes - A personal notes site</title>
+    <link>https://joyeah.github.io/tags/js/</link>
+    <description>Recent content in js on Notes - A personal notes site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Dec 2019 22:39:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://joyeah.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TampermonkeyJS开发笔记</title>
+      <link>https://joyeah.github.io/post/tampermonkeyjs%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 04 Dec 2019 22:39:22 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/tampermonkeyjs%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</guid>
+      <description>引入jquery等第三方库 1 2 // @require https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js // @require https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js 引入外部Css样式文件 暂未发现油猴如何像引入js一样引入css文件。以下是纯javascript的</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Notes - A personal notes site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 21:49:38 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Dec 2019 22:39:22 +0800</lastBuildDate>
     
 	<atom:link href="https://joyeah.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TampermonkeyJS开发笔记</title>
+      <link>https://joyeah.github.io/post/tampermonkeyjs%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 04 Dec 2019 22:39:22 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/tampermonkeyjs%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</guid>
+      <description>引入jquery等第三方库 1 2 // @require https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js // @require https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js 引入外部Css样式文件 暂未发现油猴如何像引入js一样引入css文件。以下是纯javascript的</description>
+    </item>
+    
+    <item>
+      <title>需求调研分析过期中用到的辅助工具</title>
+      <link>https://joyeah.github.io/post/%E5%93%AA%E7%94%A8%E8%BF%87%E7%9A%84%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 02 Dec 2019 22:03:46 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/%E5%93%AA%E7%94%A8%E8%BF%87%E7%9A%84%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</guid>
+      <description>前言 这里不再介绍word,excel,visio,ppt之类的工具，这些几乎多多少少都会采用的工具。 图示工具 流程类工具 ProcessOn 关系图工具 思维导图 原</description>
+    </item>
     
     <item>
       <title>油猴脚本(持续更新)</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>招聘 on Notes - A personal notes site</title>
+    <link>https://joyeah.github.io/tags/%E6%8B%9B%E8%81%98/</link>
+    <description>Recent content in 招聘 on Notes - A personal notes site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Nov 2019 21:49:38 +0800</lastBuildDate>
+    
+	<atom:link href="https://joyeah.github.io/tags/%E6%8B%9B%E8%81%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>油猴脚本(持续更新)</title>
+      <link>https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Sat, 30 Nov 2019 21:49:38 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
+      <description>招聘网站职位查询二次筛选 目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&amp;rdquo;IT&amp;rdquo</description>
+    </item>
+    
+  </channel>
+</rss>

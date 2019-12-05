@@ -50,11 +50,11 @@
 
 <meta itemprop="datePublished" content="2019-11-30T21:49:38&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-30T21:49:38&#43;08:00" />
-<meta itemprop="wordCount" content="402">
+<meta itemprop="wordCount" content="512">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="招聘,油猴,搜索过滤,效率,搜索,过滤,屏蔽," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="油猴脚本(持续更新)"/>
 <meta name="twitter:description" content="招聘网站职位查询二次筛选 目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&rdquo;IT&rdquo"/>
@@ -123,8 +123,12 @@
       <h1 class="post-title">油猴脚本(持续更新)</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 30119-11-30 </span>
-        
+        <span class="post-time"> 2019-11-30 </span>
+        <div class="post-category">
+            <a href="/categories/javascript/"> ”javascript&#34; </a>
+            <a href="/categories/%E8%84%9A%E6%9C%AC/"> 脚本 </a>
+            <a href="/categories/%E6%95%88%E7%8E%87/"> 效率 </a>
+            </div>
         
       </div>
     </header>
@@ -136,8 +140,18 @@
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#招聘网站职位查询二次筛选">招聘网站职位查询二次筛选</a></li>
-<li><a href="#谷歌搜索结果过滤">谷歌搜索结果过滤</a></li>
+<li><a href="#搜索引擎结果过滤">搜索引擎结果过滤</a>
+<ul>
+<li><a href="#目标-垃圾信息站点过滤">目标：垃圾信息站点过滤</a></li>
+<li><a href="#举个栗子">举个栗子：</a></li>
+<li><a href="#处理手段">处理手段：</a></li>
+<li><a href="#实现的搜索引擎有">实现的搜索引擎有：</a></li>
+<li><a href="#最终效果">最终效果：</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -146,23 +160,46 @@
     <div class="post-content">
       
 
-<h2 id="招聘网站职位查询二次筛选">招聘网站职位查询二次筛选</h2>
+<h3 id="招聘网站职位查询二次筛选">招聘网站职位查询二次筛选</h3>
 
 <p>目标：网站提供的搜索过滤条件可能不能满足查询的需要，需要进行个性化的二次筛选。如只找带&rdquo;IT&rdquo;的岗位，或只找大于13K的。</p>
 
-<p>初步实现的网站有：</p>
+<p>实现的网站有：</p>
 
-<ol>
+<ul>
 <li>直聘网</li>
 <li>猎聘网</li>
 <li>拉勾网</li>
-</ol>
+<li>51job</li>
+</ul>
 
-<h2 id="谷歌搜索结果过滤">谷歌搜索结果过滤</h2>
+<h3 id="搜索引擎结果过滤">搜索引擎结果过滤</h3>
 
-<p>目标：我们在搜索时，经常发现一些高频率出现在前面的，往往不是因为它们的网页更接近你的答案，而是因为这些网站的SEO做的好。比如国内著名的ndsc.net(将ndsc反序)网站以及一些类似的内容分类网站，经常抄袭别的blog很在行，只知道拷贝过来，作者甚至可能对内容一窍不通，错误百出，有些根本未经验证；广告一大片，闪得你头晕。</p>
+<h4 id="目标-垃圾信息站点过滤">目标：垃圾信息站点过滤</h4>
 
-<p>处理手段：将不喜欢的站点的内容置灰，将喜欢的网站条目前加★。用户可以自行修改脚本中的几个配置项，增加自己的喜好设置。</p>
+<p>我们在搜索时，经常发现一些高频率出现在前面的，往往不是因为它们的网页更接近你的答案，而是因为这些网站的SEO做的好。比如国内著名的ndsc.net(将ndsc反序)网站以及一些类似的内容分类网站，经常抄袭别的blog很在行，只知道拷贝过来，作者甚至可能对内容一窍不通，错误百出，有些根本未经验证；广告一大片，闪得你头晕。</p>
+
+<h4 id="举个栗子">举个栗子：</h4>
+
+<table>
+<thead>
+<tr>
+<th>bing搜索结果</th>
+<th>信息页</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><img src="bing_before.jpg" alt="bing搜索结果" /></td>
+<td><img src="tencent_page.jpg" alt="tencent页面" /></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="处理手段">处理手段：</h4>
+
+<p>将不喜欢的站点的内容置灰，将喜欢的网站条目前加★。用户可以自行修改脚本中的几个配置项，增加自己的喜好设置。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
@@ -177,7 +214,7 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//垃圾网站
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">trashsites</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;baidu.com&#39;</span><span class="p">,</span><span class="s1">&#39;csdn.net&#39;</span><span class="p">,</span><span class="s1">&#39;360.cn&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;baidu.com&#39;</span><span class="p">,</span><span class="s1">&#39;csdn.net&#39;</span><span class="p">,</span><span class="s1">&#39;360.cn&#39;</span><span class="p">,</span><span class="s1">&#39;tencent.com&#39;</span><span class="p">,</span>
 <span class="p">];</span>
 <span class="c1">//垃圾站点信息处理方式：remove-移除, gray-变灰
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">trash_action</span> <span class="o">=</span> <span class="s1">&#39;remove&#39;</span><span class="p">;</span>
@@ -186,7 +223,35 @@
 </code></pre></td></tr></table>
 </div>
 </div>
+<h4 id="实现的搜索引擎有">实现的搜索引擎有：</h4>
+
+<ul>
+<li>google.com</li>
+<li>bing.com</li>
+<li>baidu.com</li>
+</ul>
+
+<h4 id="最终效果">最终效果：</h4>
+
+<table>
+<thead>
+<tr>
+<th><img src="bing_after.jpg" alt="bing搜索效果" /></th>
+<th><img src="google_after.jpg" alt="google搜索效果" /></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 <p>下载地址： <a href="https://github.com/Joyeah/tampermonkey_js">https://github.com/Joyeah/tampermonkey_js</a></p>
+
+<p>注：要实现过滤，你当然也可以直接在搜索框输入关键词后，再输入 -csdn -baidu等来屏蔽之，但每次输入就是有点麻烦了，不如用脚本自动处理来的爽滑。</p>
 
     </div>
 
@@ -198,7 +263,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        30119-11-30
+        2019-11-30
         
     </span>
   </p>
@@ -206,9 +271,21 @@
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/%E6%8B%9B%E8%81%98/">招聘</a>
+          <a href="/tags/%E6%B2%B9%E7%8C%B4/">油猴</a>
+          <a href="/tags/%E6%90%9C%E7%B4%A2%E8%BF%87%E6%BB%A4/">搜索过滤</a>
+          <a href="/tags/%E6%95%88%E7%8E%87/">效率</a>
+          <a href="/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
+          <a href="/tags/%E8%BF%87%E6%BB%A4/">过滤</a>
+          <a href="/tags/%E5%B1%8F%E8%94%BD/">屏蔽</a>
+          </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/%E5%93%AA%E7%94%A8%E8%BF%87%E7%9A%84%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">需求调研分析过期中用到的辅助工具</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/%E6%B2%B9%E7%8C%B4%E7%88%AC%E8%99%AB%E6%96%B9%E6%A1%88/">
             <span class="next-text nav-default">油猴爬虫方案</span>
             <span class="next-text nav-mobile">Next</span>
