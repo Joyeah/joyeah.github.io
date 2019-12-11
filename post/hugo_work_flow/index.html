@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Joyeah" /><meta name="description" content="建立github.io站点 下载安装hugo 添加文章 编辑文章 提交文章" /><meta name="keywords" content="note, python, nodejs, go" />
+<meta name="author" content="Joyeah" /><meta name="description" content="涉及工具 git/TortiseGit Typora 准备 github.io站点 1.创建github帐号 2.建立以帐号名同名的库 3.配置github.io。你的站点地址就是：user" /><meta name="keywords" content="note, python, nodejs, go" />
 
 
 
@@ -39,25 +39,25 @@
 
 
 <meta property="og:title" content="hugo托管到github pages完整工作流程" />
-<meta property="og:description" content="建立github.io站点 下载安装hugo 添加文章 编辑文章 提交文章" />
+<meta property="og:description" content="涉及工具 git/TortiseGit Typora 准备 github.io站点 1.创建github帐号 2.建立以帐号名同名的库 3.配置github.io。你的站点地址就是：user" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://joyeah.github.io/post/hugo_work_flow/" />
 <meta property="article:published_time" content="2019-12-10T15:15:55+08:00" />
 <meta property="article:modified_time" content="2019-12-10T15:15:55+08:00" />
 <meta itemprop="name" content="hugo托管到github pages完整工作流程">
-<meta itemprop="description" content="建立github.io站点 下载安装hugo 添加文章 编辑文章 提交文章">
+<meta itemprop="description" content="涉及工具 git/TortiseGit Typora 准备 github.io站点 1.创建github帐号 2.建立以帐号名同名的库 3.配置github.io。你的站点地址就是：user">
 
 
 <meta itemprop="datePublished" content="2019-12-10T15:15:55&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-10T15:15:55&#43;08:00" />
-<meta itemprop="wordCount" content="33">
+<meta itemprop="wordCount" content="452">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="hugo托管到github pages完整工作流程"/>
-<meta name="twitter:description" content="建立github.io站点 下载安装hugo 添加文章 编辑文章 提交文章"/>
+<meta name="twitter:description" content="涉及工具 git/TortiseGit Typora 准备 github.io站点 1.创建github帐号 2.建立以帐号名同名的库 3.配置github.io。你的站点地址就是：user"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,12 +136,18 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#涉及工具">涉及工具</a></li>
+<li><a href="#准备">准备</a>
 <ul>
-<li><a href="#建立github-io站点">建立github.io站点</a></li>
+<li><a href="#github-io站点">github.io站点</a></li>
 <li><a href="#下载安装hugo">下载安装hugo</a></li>
+</ul></li>
+<li><a href="#开始工作">开始工作</a>
+<ul>
 <li><a href="#添加文章">添加文章</a></li>
 <li><a href="#编辑文章">编辑文章</a></li>
+<li><a href="#本地发布">本地发布</a></li>
+<li><a href="#本地运行">本地运行</a></li>
 <li><a href="#提交文章">提交文章</a></li>
 </ul></li>
 </ul></li>
@@ -152,15 +158,109 @@
     <div class="post-content">
       
 
-<h3 id="建立github-io站点">建立github.io站点</h3>
+<h2 id="涉及工具">涉及工具</h2>
+
+<p>git/TortiseGit</p>
+
+<p>Typora</p>
+
+<h2 id="准备">准备</h2>
+
+<h3 id="github-io站点">github.io站点</h3>
+
+<p>1.创建github帐号</p>
+
+<p>2.建立以帐号名同名的库</p>
+
+<p>3.配置github.io。你的站点地址就是：username.github.io</p>
 
 <h3 id="下载安装hugo">下载安装hugo</h3>
 
-<h3 id="添加文章">添加文章</h3>
+<p>下载： <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
 
+<p>官网： <a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
+
+<p>注意把hugo所在路径添加到环境变量，这样在任务路径下就可以直接使用hugo了。</p>
+
+<h2 id="开始工作">开始工作</h2>
+
+<h3 id="添加文章">添加文章</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo new post/article1.md</span></code></pre></td></tr></table>
+</div>
+</div>
 <h3 id="编辑文章">编辑文章</h3>
 
+<p>可以采用Typora编辑文章内容。</p>
+
+<p>可在文章头部区域添加tag,categories。类似如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">tag<span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;hugo&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;博客&#34;</span><span class="p">]</span><span class="w">
+</span><span class="w"></span>categories<span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;笔记&#34;</span><span class="p">]</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>编辑好后，可以将draft改为false。</p>
+
+<h3 id="本地发布">本地发布</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># cd &lt;你的本地hugo站点根目录&gt;</span>
+<span class="c1"># hugo</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>若把草稿（draft: true）也一同发布，则执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo -D</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="本地运行">本地运行</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo server</span>
+<span class="c1"># hugo server -D</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>打开浏览器，输入地址<a href="http://localhost:1313/查看">http://localhost:1313/查看</a></p>
+
 <h3 id="提交文章">提交文章</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># cd public</span>
+<span class="c1"># git status (查看变更状态)</span>
+<span class="c1"># git add .</span>
+<span class="c1"># git commit -m &#34;add a article&#34;</span>
+<span class="c1"># git push origin master</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>可能需要等一会，才能看到你的站点更新了。</p>
 
     </div>
 
