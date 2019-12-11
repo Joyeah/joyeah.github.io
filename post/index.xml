@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Notes - A personal notes site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Nov 2019 19:08:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 16:53:53 +0800</lastBuildDate>
     
 	<atom:link href="https://joyeah.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevOps学习</title>
+      <link>https://joyeah.github.io/post/devops_study/</link>
+      <pubDate>Wed, 11 Dec 2019 16:53:53 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/devops_study/</guid>
+      <description>DevOps 是什么 Dev = Development Ops = Operations DevOps运动的起源通常被放在2009年前后。 DevOps 是一种思想、一组最佳实践、一种文化，让开发（ Development ）和运维（ Operations ）这两个完全</description>
+    </item>
+    
+    <item>
+      <title>hugo托管到github pages完整工作流程</title>
+      <link>https://joyeah.github.io/post/hugo_work_flow/</link>
+      <pubDate>Tue, 10 Dec 2019 15:15:55 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/post/hugo_work_flow/</guid>
+      <description>建立github.io站点 下载安装hugo 添加文章 编辑文章 提交文章</description>
+    </item>
     
     <item>
       <title>Hugo常用命令及页面指令</title>
