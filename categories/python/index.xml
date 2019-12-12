@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Notes - A personal notes site</title>
+    <link>https://joyeah.github.io/categories/python/</link>
+    <description>Recent content in python on Notes - A personal notes site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Dec 2019 19:20:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://joyeah.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Centos7升级python2.7到3.x</title>
+      <link>https://joyeah.github.io/centos/centos_python_2to3/</link>
+      <pubDate>Tue, 10 Dec 2019 19:20:17 +0800</pubDate>
+      
+      <guid>https://joyeah.github.io/centos/centos_python_2to3/</guid>
+      <description>下载安装python 3.x 1 2 3 # python --version Python 2.7.5 # wget -c https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz 检查编译环境 检查是否将gcc，gcc-c++等是否安装，并升级到最新版本。若没有安装可执行安装</description>
+    </item>
+    
+  </channel>
+</rss>

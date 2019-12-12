@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Centos7中安装nodejs - Notes - A personal notes site</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Joyeah" /><meta name="description" content="前提 检查epel-release包是否已经安装： 1 # yum list install|grep epel-release 或： 1 # yum info epel-release 若无，则安装： 1 # yum install epel-release 注：EPEL（Extra Packages for Enterprise Linux）" /><meta name="keywords" content="note, python, nodejs, go" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://joyeah.github.io/centos/centos_nodejs_install/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Centos7中安装nodejs" />
+<meta property="og:description" content="前提 检查epel-release包是否已经安装： 1 # yum list install|grep epel-release 或： 1 # yum info epel-release 若无，则安装： 1 # yum install epel-release 注：EPEL（Extra Packages for Enterprise Linux）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joyeah.github.io/centos/centos_nodejs_install/" />
+<meta property="article:published_time" content="2019-12-10T20:49:50+08:00" />
+<meta property="article:modified_time" content="2019-12-10T20:49:50+08:00" />
+<meta itemprop="name" content="Centos7中安装nodejs">
+<meta itemprop="description" content="前提 检查epel-release包是否已经安装： 1 # yum list install|grep epel-release 或： 1 # yum info epel-release 若无，则安装： 1 # yum install epel-release 注：EPEL（Extra Packages for Enterprise Linux）">
+
+
+<meta itemprop="datePublished" content="2019-12-10T20:49:50&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-10T20:49:50&#43;08:00" />
+<meta itemprop="wordCount" content="337">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Centos7中安装nodejs"/>
+<meta name="twitter:description" content="前提 检查epel-release包是否已经安装： 1 # yum list install|grep epel-release 或： 1 # yum info epel-release 若无，则安装： 1 # yum install epel-release 注：EPEL（Extra Packages for Enterprise Linux）"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Notes</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Notes</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    
+
+<h3 id="前提">前提</h3>
+
+<p>检查epel-release包是否已经安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># yum list install|grep epel-release</pre></td></tr></table>
+</div>
+</div>
+<p>或：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># yum info epel-release</pre></td></tr></table>
+</div>
+</div>
+<p>若无，则安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># yum install epel-release</pre></td></tr></table>
+</div>
+</div>
+<p>注：EPEL（Extra Packages for Enterprise Linux）企业版Linux的额外软件包，是Fedora小组维护的一个软件仓库项目，为RHEL/CentOS提供他们默认不提供的软件包。</p>
+
+<h3 id="安装">安装</h3>
+
+<p>注意，通过yum 安装的版本比较低，可以通过node。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># yum install nodejs
+# yum remove nodejs</pre></td></tr></table>
+</div>
+</div>
+<p>参考node官方网站提示第三方维护的方法：</p>
+
+<p><a href="https://github.com/nodesource/distributions/blob/master/README.md">https://github.com/nodesource/distributions/blob/master/README.md</a></p>
+
+<p>按提示，仍然要检查构建工具，若没有，则要安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">yum install gcc-c++ make
+# or: yum groupinstall &#39;Development Tools&#39;</pre></td></tr></table>
+</div>
+</div>
+<p>执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># curl -sL https://rpm.nodesource.com/setup_13.x | bash -</pre></td></tr></table>
+</div>
+</div>
+<p>输出日志中最后有：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"><span class="o">...</span><span class="p">..</span>
+<span class="err">##</span> <span class="nx">Run</span> <span class="s">`sudo yum install -y nodejs`</span> <span class="nx">to</span> <span class="nx">install</span> <span class="nx">Node</span><span class="p">.</span><span class="nx">js</span> <span class="mf">13.</span><span class="nx">x</span> <span class="nx">and</span> <span class="nx">npm</span><span class="p">.</span>
+<span class="err">##</span> <span class="nx">You</span> <span class="nx">may</span> <span class="nx">also</span> <span class="nx">need</span> <span class="nx">development</span> <span class="nx">tools</span> <span class="nx">to</span> <span class="nx">build</span> <span class="nx">native</span> <span class="nx">addons</span><span class="p">:</span>
+     <span class="nx">sudo</span> <span class="nx">yum</span> <span class="nx">install</span> <span class="nx">gcc</span><span class="o">-</span><span class="nx">c</span><span class="o">++</span> <span class="nx">make</span>
+<span class="err">##</span> <span class="nx">To</span> <span class="nx">install</span> <span class="nx">the</span> <span class="nx">Yarn</span> <span class="kn">package</span> <span class="nx">manager</span><span class="p">,</span> <span class="nx">run</span><span class="p">:</span>
+     <span class="nx">curl</span> <span class="o">-</span><span class="nx">sL</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+</span><span class="c1"></span>     <span class="nx">sudo</span> <span class="nx">yum</span> <span class="nx">install</span> <span class="nx">yarn</span></pre></td></tr></table>
+</div>
+</div>
+<p>安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">sudo yum install -y nodejs</pre></td></tr></table>
+</div>
+</div>
+<p>经过漫长等待&hellip;..</p>
+
+<p>运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-\" data-lang="\"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-\" data-lang="\"># node -v
+v13.3.0</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://joyeah.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Joyeah</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
