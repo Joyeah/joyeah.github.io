@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.74.3 with theme even" />
 
 
 <link rel="canonical" href="https://joyeah.github.io/post/2019-10-17_hugo/" />
@@ -46,10 +46,8 @@
 <meta property="article:modified_time" content="2019-10-17T21:48:29+08:00" />
 <meta itemprop="name" content="How to create a Hugo site on github.com">
 <meta itemprop="description" content="一、创建仓库 假如你创始了帐号为：tata 创建名为：tata.github.io为名称的仓库 二、安装hugo windows: 1.下载 hugo_0.58.3_Windows-64bit.zip 解压后，将路径添加到p">
-
-
-<meta itemprop="datePublished" content="2019-10-17T21:48:29&#43;08:00" />
-<meta itemprop="dateModified" content="2019-10-17T21:48:29&#43;08:00" />
+<meta itemprop="datePublished" content="2019-10-17T21:48:29+08:00" />
+<meta itemprop="dateModified" content="2019-10-17T21:48:29+08:00" />
 <meta itemprop="wordCount" content="251">
 
 
@@ -133,80 +131,58 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#一-创建仓库">一、创建仓库</a></li>
-<li><a href="#二-安装hugo">二、安装hugo</a></li>
-<li><a href="#三-建立本地站点">三、建立本地站点</a></li>
-<li><a href="#四-运行服务">四、运行服务</a></li>
-<li><a href="#五-关联仓库">五、关联仓库</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#一创建仓库">一、创建仓库</a></li>
+    <li><a href="#二安装hugo">二、安装hugo</a></li>
+    <li><a href="#三建立本地站点">三、建立本地站点</a></li>
+    <li><a href="#四运行服务">四、运行服务</a></li>
+    <li><a href="#五关联仓库">五、关联仓库</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="一-创建仓库">一、创建仓库</h2>
-
+      <h2 id="一创建仓库">一、创建仓库</h2>
 <p>假如你创始了帐号为：tata</p>
-
 <p>创建名为：tata.github.io为名称的仓库</p>
-
-<h2 id="二-安装hugo">二、安装hugo</h2>
-
+<h2 id="二安装hugo">二、安装hugo</h2>
 <p>windows:</p>
-
 <p>1.下载 <a href="https://github.com/gohugoio/hugo/releases/download/v0.58.3/hugo_0.58.3_Windows-64bit.zip">hugo_0.58.3_Windows-64bit.zip</a></p>
-
-<ol>
+<ol start="2">
 <li>解压后，将路径添加到path中</li>
 </ol>
-
-<h2 id="三-建立本地站点">三、建立本地站点</h2>
-
+<h2 id="三建立本地站点">三、建立本地站点</h2>
 <blockquote>
 <p>hugo new site  mysite     #创建一个hugo站点项目</p>
-
 <p>cd mysite</p>
-
 <p>hugo  # 创建public文件夹，生成站点文件</p>
 </blockquote>
-
-<h2 id="四-运行服务">四、运行服务</h2>
-
+<h2 id="四运行服务">四、运行服务</h2>
 <p>在站点根路径下启动hugo服务</p>
-
 <blockquote>
 <p>hugo server</p>
 </blockquote>
-
-<p>访问：<a href="http://localhost:1313/">http://localhost:1313/</a></p>
-
-<h2 id="五-关联仓库">五、关联仓库</h2>
+<p>访问：http://localhost:1313/</p>
+<h2 id="五关联仓库">五、关联仓库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">git init
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git init
 git add .
 git commit -m &#34;init&#34;
 git remote add origin https://github.com/tata/tata.github.io.git
-git push -u origin master</pre></td></tr></table>
+git push -u origin master
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>或者使用TortoiseGit来操作。</p>
-
+</div><p>或者使用TortoiseGit来操作。</p>
 <p>六、访问站点</p>
-
-<p>打开浏览器：<a href="http://tata.github.io">http://tata.github.io</a></p>
+<p>打开浏览器：http://tata.github.io</p>
 
     </div>
 
@@ -228,9 +204,9 @@ git push -u origin master</pre></td></tr></table>
 <footer class="post-footer">
       
       <nav class="post-nav">
-        <a class="prev" href="/post/test/">
+        <a class="prev" href="/post/windows_sticky_notes/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Test</span>
+            <span class="prev-text nav-default">苦苦寻找ATnotes的替代品(win10桌面便签工具)</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
@@ -281,7 +257,8 @@ git push -u origin master</pre></td></tr></table>
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

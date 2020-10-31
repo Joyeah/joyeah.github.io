@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.74.3 with theme even" />
 
 
 <link rel="canonical" href="https://joyeah.github.io/post/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
@@ -46,10 +46,8 @@
 <meta property="article:modified_time" content="2019-11-28T19:08:10+08:00" />
 <meta itemprop="name" content="Hugo常用命令及页面指令">
 <meta itemprop="description" content="常用命令 新建草稿 hugo new hello.md hugo new about/index.md hugo new post/first.md 运行Hugo 1 $ hugo server --theme=hyde --buildDrafts 部署 1 $ hugo --theme=hyde --baseUrl=&#34;http://coderzh.github.io/&#34; 生成最终页面，静态文件会默认生成到public目录 其它写法： hugo -D #部">
-
-
-<meta itemprop="datePublished" content="2019-11-28T19:08:10&#43;08:00" />
-<meta itemprop="dateModified" content="2019-11-28T19:08:10&#43;08:00" />
+<meta itemprop="datePublished" content="2019-11-28T19:08:10+08:00" />
+<meta itemprop="dateModified" content="2019-11-28T19:08:10+08:00" />
 <meta itemprop="wordCount" content="150">
 
 
@@ -133,70 +131,56 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#常用命令">常用命令</a>
-<ul>
-<li><a href="#新建草稿">新建草稿</a></li>
-<li><a href="#运行hugo">运行Hugo</a></li>
-<li><a href="#部署">部署</a></li>
-</ul></li>
-<li><a href="#常用页面指令">常用页面指令</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#常用命令">常用命令</a>
+      <ul>
+        <li><a href="#新建草稿">新建草稿</a></li>
+        <li><a href="#运行hugo">运行Hugo</a></li>
+        <li><a href="#部署">部署</a></li>
+      </ul>
+    </li>
+    <li><a href="#常用页面指令">常用页面指令</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="常用命令">常用命令</h2>
-
+      <h2 id="常用命令">常用命令</h2>
 <h3 id="新建草稿">新建草稿</h3>
-
 <blockquote>
 <p>hugo new hello.md</p>
-
 <p>hugo new about/index.md</p>
-
 <p>hugo new post/first.md</p>
 </blockquote>
-
 <h3 id="运行hugo">运行Hugo</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ hugo server --theme=hyde --buildDrafts</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ hugo server --theme=hyde --buildDrafts
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="部署">部署</h3>
+</div><h3 id="部署">部署</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ hugo --theme=hyde --baseUrl=&#34;http://coderzh.github.io/&#34;</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ hugo --theme=hyde --baseUrl=&#34;http://coderzh.github.io/&#34;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>生成最终页面，静态文件会默认生成到public目录</p>
-
+</div><p>生成最终页面，静态文件会默认生成到public目录</p>
 <p>其它写法：</p>
-
 <blockquote>
 <p>hugo -D  #部署到public</p>
-
+</blockquote>
+<blockquote>
 <p>$ hugo server -D   #部署到public并启动服务</p>
-
 <p>$ hugo server -t even &ndash;buildDrafts</p>
 </blockquote>
-
 <p>-t  指定渲染主题， &ndash;theme=hyde</p>
-
 <p>-D &ndash;buildDrafts  生成标识为草稿的页面，即draft = true的文章也会生成。</p>
-
 <h2 id="常用页面指令">常用页面指令</h2>
 
     </div>
@@ -219,9 +203,9 @@
 <footer class="post-footer">
       
       <nav class="post-nav">
-        <a class="prev" href="/post/%E6%B2%B9%E7%8C%B4%E7%88%AC%E8%99%AB%E6%96%B9%E6%A1%88/">
+        <a class="prev" href="/post/hugo_work_flow/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">油猴爬虫方案</span>
+            <span class="prev-text nav-default">hugo托管到github pages完整工作流程</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         <a class="next" href="/post/windows_sticky_notes/">
@@ -276,7 +260,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
