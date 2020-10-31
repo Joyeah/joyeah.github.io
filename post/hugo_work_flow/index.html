@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.3 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://joyeah.github.io/post/hugo_work_flow/" />
@@ -46,8 +46,10 @@
 <meta property="article:modified_time" content="2019-12-10T15:15:55+08:00" />
 <meta itemprop="name" content="hugo托管到github pages完整工作流程">
 <meta itemprop="description" content="涉及工具 git/TortiseGit Typora 准备 github.io站点 1.创建github帐号 2.建立以帐号名同名的库 3.配置github.io。你的站点地址就是：user">
-<meta itemprop="datePublished" content="2019-12-10T15:15:55+08:00" />
-<meta itemprop="dateModified" content="2019-12-10T15:15:55+08:00" />
+
+
+<meta itemprop="datePublished" content="2019-12-10T15:15:55&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-10T15:15:55&#43;08:00" />
 <meta itemprop="wordCount" content="452">
 
 
@@ -131,100 +133,120 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#涉及工具">涉及工具</a></li>
-    <li><a href="#准备">准备</a>
-      <ul>
-        <li><a href="#githubio站点">github.io站点</a></li>
-        <li><a href="#下载安装hugo">下载安装hugo</a></li>
-      </ul>
-    </li>
-    <li><a href="#开始工作">开始工作</a>
-      <ul>
-        <li><a href="#添加文章">添加文章</a></li>
-        <li><a href="#编辑文章">编辑文章</a></li>
-        <li><a href="#本地发布">本地发布</a></li>
-        <li><a href="#本地运行">本地运行</a></li>
-        <li><a href="#提交文章">提交文章</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#涉及工具">涉及工具</a></li>
+<li><a href="#准备">准备</a>
+<ul>
+<li><a href="#github-io站点">github.io站点</a></li>
+<li><a href="#下载安装hugo">下载安装hugo</a></li>
+</ul></li>
+<li><a href="#开始工作">开始工作</a>
+<ul>
+<li><a href="#添加文章">添加文章</a></li>
+<li><a href="#编辑文章">编辑文章</a></li>
+<li><a href="#本地发布">本地发布</a></li>
+<li><a href="#本地运行">本地运行</a></li>
+<li><a href="#提交文章">提交文章</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h2 id="涉及工具">涉及工具</h2>
+      
+
+<h2 id="涉及工具">涉及工具</h2>
+
 <p>git/TortiseGit</p>
+
 <p>Typora</p>
+
 <h2 id="准备">准备</h2>
-<h3 id="githubio站点">github.io站点</h3>
+
+<h3 id="github-io站点">github.io站点</h3>
+
 <p>1.创建github帐号</p>
+
 <p>2.建立以帐号名同名的库</p>
+
 <p>3.配置github.io。你的站点地址就是：username.github.io</p>
+
 <h3 id="下载安装hugo">下载安装hugo</h3>
+
 <p>下载： <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+
 <p>官网： <a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
+
 <p>注意把hugo所在路径添加到环境变量，这样在任务路径下就可以直接使用hugo了。</p>
+
 <h2 id="开始工作">开始工作</h2>
+
 <h3 id="添加文章">添加文章</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo new post/article1.md</span>
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo new post/article1.md</span></code></pre></td></tr></table>
 </div>
-</div><h3 id="编辑文章">编辑文章</h3>
+</div>
+<h3 id="编辑文章">编辑文章</h3>
+
 <p>可以采用Typora编辑文章内容。</p>
+
 <p>可在文章头部区域添加tag,categories。类似如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">tag</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;hugo&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;博客&#34;</span><span class="p">]</span><span class="w">
-</span><span class="w"></span><span class="k">categories</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;笔记&#34;</span><span class="p">]</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">tag<span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;hugo&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;博客&#34;</span><span class="p">]</span><span class="w">
+</span><span class="w"></span>categories<span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;笔记&#34;</span><span class="p">]</span></code></pre></td></tr></table>
 </div>
-</div><p>编辑好后，可以将draft改为false。</p>
+</div>
+<p>编辑好后，可以将draft改为false。</p>
+
 <h3 id="本地发布">本地发布</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># cd &lt;你的本地hugo站点根目录&gt;</span>
-<span class="c1"># hugo</span>
-</code></pre></td></tr></table>
+<span class="c1"># hugo</span></code></pre></td></tr></table>
 </div>
-</div><p>若把草稿（draft: true）也一同发布，则执行：</p>
+</div>
+<p>若把草稿（draft: true）也一同发布，则执行：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo -D</span>
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo -D</span></code></pre></td></tr></table>
 </div>
-</div><h3 id="本地运行">本地运行</h3>
+</div>
+<h3 id="本地运行">本地运行</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo server</span>
-<span class="c1"># hugo server -D</span>
-</code></pre></td></tr></table>
+<span class="c1"># hugo server -D</span></code></pre></td></tr></table>
 </div>
-</div><p>打开浏览器，输入地址http://localhost:1313/查看</p>
+</div>
+<p>打开浏览器，输入地址<a href="http://localhost:1313/查看">http://localhost:1313/查看</a></p>
+
 <h3 id="提交文章">提交文章</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -235,10 +257,10 @@
 <span class="c1"># git status (查看变更状态)</span>
 <span class="c1"># git add .</span>
 <span class="c1"># git commit -m &#34;add a article&#34;</span>
-<span class="c1"># git push origin master</span>
-</code></pre></td></tr></table>
+<span class="c1"># git push origin master</span></code></pre></td></tr></table>
 </div>
-</div><p>可能需要等一会，才能看到你的站点更新了。</p>
+</div>
+<p>可能需要等一会，才能看到你的站点更新了。</p>
 
     </div>
 
@@ -265,8 +287,8 @@
             <span class="prev-text nav-default">DevOps学习</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-            <span class="next-text nav-default">Hugo常用命令及页面指令</span>
+        <a class="next" href="/post/tampermonkeyjs%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+            <span class="next-text nav-default">TampermonkeyJS开发笔记</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -317,8 +339,7 @@
 
   <span class="copyright-year">
     &copy; 
-    2019 - 
-    2020
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
